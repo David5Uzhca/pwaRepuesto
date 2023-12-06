@@ -1,0 +1,16 @@
+<p>calificacion works!</p>
+<section class="list-container">
+    <div class="form-container">
+        <h1 id=comentario class="titulos">Calificaciones</h1>
+        <h6 class="subtitulos">Por favor, Llene el formulario</h6>
+        <form id="survey-form" class="centrado">
+            <label for="txtMateria" class="label">MATERIA:</label>
+            <input type="text" class="form-control" id="txtMateria" name="txtMateria" [(ngModel)]="calificacion.materia">
+            <label for="txtNota" class="label">NOTA:</label>
+            <input type="text" class="form-control" id="txtNota" name="txtNota" [(ngModel)]="calificacion.nota">
+            <label for="txtFecha" class="label">FECHA:</label>
+            <input type="text" class="form-control" id="txtFecha" name="txtFecha" [(ngModel)]="calificacion.fecha">
+            <button id="botonsaveContacto" type="submit" class="btn" (click)="savePersona()">GUARDAR</button>
+    </form>
+</div>
+</section>

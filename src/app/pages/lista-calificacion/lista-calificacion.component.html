@@ -1,0 +1,6 @@
+<p>lista-calificacion works!</p>
+<ul>
+    <li *ngFor="let calificacion of listaCalificaciones | async">
+        <a routerLink="/pages/calificacion{{calificacion.uid}}">{{calificacion.MATERIA}}</a>
+    </li>
+</ul>
