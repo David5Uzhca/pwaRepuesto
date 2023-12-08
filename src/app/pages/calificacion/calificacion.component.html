@@ -1,4 +1,3 @@
-<p>calificacion works!</p>
 <section class="list-container">
     <div class="form-container">
         <h1 id=comentario class="titulos">Calificaciones</h1>
@@ -11,6 +10,8 @@
             <label for="txtFecha" class="label">FECHA:</label>
             <input type="text" class="form-control" id="txtFecha" name="txtFecha" [(ngModel)]="calificacion.fecha">
             <button id="botonsaveContacto" type="submit" class="btn" (click)="savePersona()">GUARDAR</button>
+            <button id="botondeleteContacto" type="submit" class="btn" (click)="eliminarPersona()">ELIMINAR</button>
+            <button id="botondeleteContacto" type="submit" class="btn" (click)="updatePersona()">EDITAR</button>
     </form>
 </div>
-</section>
+</section>  

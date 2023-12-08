@@ -1,0 +1,30 @@
+/* Estilos adicionales para la lista de calificaciones */
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilos para los elementos de la lista */
+li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para los enlaces dentro de los elementos de la lista */
+li a {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+    //background: linear-gradient(to right, #0099ff, #66ffe6);
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+/* Efecto de hover para los enlaces */
+li a:hover {
+    background: linear-gradient(to right, #c4c4c4, #929292);
+}

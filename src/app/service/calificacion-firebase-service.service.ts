@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CalificacionFirebaseServiceService {
-  private path = '/calificaciones';
+  private path = '/notas';
   calificacionesRef: AngularFirestoreCollection<any>;
 
   constructor(private db: AngularFirestore) {
@@ -37,5 +37,27 @@ export class CalificacionFirebaseServiceService {
     return this.db.doc(this.path+'/'+uid).valueChanges();
   }
 
+  update(calificacion: Calificacion) {
+    const uid = calificacion.uid;
+    if (uid) {
+      // Verifica que la nota tenga un UID antes de intentar actualizar
+      return this.calificacionesRef.doc(uid).update(Object.assign({}, calificacion));
+    } else {
+      // Manejar el caso en el que la nota no tenga un UID válido
+      console.error('La nota no tiene un UID válido para actualizar.');
+      return Promise.reject('La nota no tiene un UID válido para actualizar.');
+    }
+
+  }
+
+  delete(calificacion: Calificacion) {
+    const uid = calificacion.uid;
+    if (uid) {
+      return this.calificacionesRef.doc(uid).delete();
+    } else {
+      console.error('La nota no tiene un UID válido para eliminar.');
+      return Promise.reject('La nota no tiene un UID válido para eliminar.');
+    }
+  }
 }
 

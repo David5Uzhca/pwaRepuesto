@@ -1,11 +1,11 @@
 export const enviroments = {
     production: false,
     firebaseConfig : {
-        apiKey: "AIzaSyAKc6jXMWlYcage18vTuKbEcg6Nbkjx06M",
-        authDomain: "progressive-5f6f1.firebaseapp.com",
-        projectId: "progressive-5f6f1",
-        storageBucket: "progressive-5f6f1.appspot.com",
-        messagingSenderId: "1054981280687",
-        appId: "1:1054981280687:web:af604311ff5a4e014cd55a"
+      apiKey: "AIzaSyDjYNnwoFGWWCAhi9oSNdczE3dKTnlreio",
+      authDomain: "evaluativo-dbapp.firebaseapp.com",
+      projectId: "evaluativo-dbapp",
+      storageBucket: "evaluativo-dbapp.appspot.com",
+      messagingSenderId: "807863234284",
+      appId: "1:807863234284:web:d6693f8c7140450263bfc9"
   }
 };

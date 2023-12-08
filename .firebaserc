@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "progressive-5f6f1"
-  }
+    "default": "progressive-5f6f1",
+    "evaluativepwa": "evaluativo-dbapp"
+  },
+  "targets": {},
+  "etags": {}
 }

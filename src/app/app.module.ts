@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +12,8 @@ import { enviroments } from 'src/enviroments/enviroments';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { FormsModule } from '@angular/forms';
 import { CalificacionFirebaseServiceService } from './service/calificacion-firebase-service.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,13 @@ import { CalificacionFirebaseServiceService } from './service/calificacion-fireb
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AngularFirestoreModule.enablePersistence(),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      registrationStrategy: 'registerWhenStable:30000',
+    })
+
   ],
   providers: [
     CalificacionFirebaseServiceService,

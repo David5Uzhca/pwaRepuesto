@@ -27,5 +27,12 @@ export class CalificacionComponent {
   savePersona(){
     this.calificacionFirebaseService.save(this.calificacion);
     this.calificacion = new Calificacion();
+
+  }
+  eliminarPersona(){
+    this.calificacionFirebaseService.delete(this.calificacion);
+  }
+  updatePersona(){
+    
   }
 }
